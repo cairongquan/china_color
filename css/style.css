@@ -1,0 +1,280 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #50616d;
+    /* 背景色渐变 */
+    transition:background-color 1.3s ease-in;
+    z-index: 0;
+}
+
+
+@font-face{
+    font-family: 'chinaText';
+    src:url('../font/99.ttf');
+}
+
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?2gxtm');
+    src:  url('../fonts/icomoon.eot?2gxtm#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?2gxtm') format('truetype'),
+      url('../fonts/icomoon.woff?2gxtm') format('woff'),
+      url('../fonts/icomoon.svg?2gxtm#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+
+.tittle_top{
+    z-index: -1;
+    background-color: rgba(225, 225, 225, .5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgba(0, 0, 0, .8);
+    text-align: center;
+    font-size: 90px;
+    font-family: 'chinaText';
+    margin: 10px auto;
+    width: 70%;
+    height: 200px;
+}
+
+.tittle_top h5{
+    margin: 0;
+    display: block;
+    font-weight: 100;
+}
+
+.tittle_top span{
+    margin-top: 30px;
+    font-size: 28px;
+    display: block;
+}
+
+#app{
+    z-index: 3;
+    width: 70%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.color_info{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(225, 225, 225, .5);
+}
+
+.color_main{
+    transition:background-color 1.3s ease-in;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    background-color: #065279;
+    margin:10px auto;
+}
+
+.color_rgb,.color_hex{
+    color: rgba(0, 0, 0, .8);
+    font-family:'chinaText';
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 80%;
+    height: 30px;
+    margin: 50px auto;
+}
+
+.color_tittle{
+    transition:background-color 1.3s ease-in;
+    text-align: center;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: #065279;
+}
+
+.main_tittle{
+    color: rgba(0, 0, 0, .8);
+    margin: 12px auto;
+    font-family: 'chinaText';
+    display: block;
+    width: 115px;
+    font-size: 115px;
+    line-height:108px;
+}
+
+
+
+.en_tittle{
+    margin-top: 37px;
+    font-size: 37px;
+    font-family: 'chinaText';
+    margin-top: 40px;
+}
+
+.bottom_tittle{
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    font-family: 'chinaText';
+    width: 70%;
+    text-align: center;
+    left: 50%;
+    margin-left: -35%;
+}
+
+.ver{
+    display: block;
+}
+
+#left_btn{
+    z-index: 3;
+    top: 0;
+    position: absolute;
+    width: 15%;
+    height: 100%;
+}
+
+.btn{
+    left: 0;
+    position: absolute;
+    font-family: 'icomoon';
+    color: rgba(0, 0, 0, .7);
+    font-size: 30px;
+    text-decoration: none;
+    animation: 1s;
+    animation-fill-mode: forwards;
+    z-index: 999;
+}
+
+@keyframes back{
+    0%{
+        opacity: 1;
+        font-size: 30px;
+        left: 0%;
+    }
+    100%{
+        opacity: .1;
+        font-size: 40px;
+        left: 100%;
+    }
+}
+
+@keyframes in{
+    0%{
+        opacity: .1;
+        font-size: 40px;
+        left: 100%;
+    }
+    100%{
+        opacity: 1;
+        font-size: 30px;
+        left: 0%;
+    }
+}
+
+
+
+
+.left_menu{
+    overflow: auto;
+    position: absolute;
+    left: -98%;
+    width: 98%;
+    height: 100%;
+    background-color: rgba(225, 225, 225, .5);
+    animation: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes back_menu{
+    0%{
+        left: -98%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+@keyframes in_menu{
+    0%{
+        left:0%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+
+.left_menu h6{
+    font-family: 'chinaText';
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.left_ul{
+    margin: 0 auto;
+    list-style: none;
+    width: 80%;
+    min-height: 50px;
+}
+
+.left_ul li{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+
+.left_ul li a{
+    animation: .3s;
+    animation-fill-mode: forwards;
+    font-weight: 500;
+    font-family: 'chinaText';
+    font-size: 10px;
+    color: rgba(0, 0, 0, .9);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+}
+
+.left_ul li a span{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -15px;
+}
+
+
+@keyframes a_big{
+    0%{
+        font-size: 10px;
+        width: 40px;
+        height: 40px;
+    }
+    100%{
+        font-size: 13px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@keyframes a_small{
+    0%{
+        font-size: 13px;
+        width: 45px;
+        height: 45px;
+    }
+    100%{
+        font-size: 10px;
+        width: 40px;
+        height: 40px;
+    }
+}

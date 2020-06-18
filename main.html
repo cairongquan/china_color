@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国·色</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="left_btn">
+        <a href="javascript:;" class="btn"></a>
+        <div class="left_menu">
+            <h6>国·色</h6>
+            <ul class="left_ul">
+                <li :key='item.id' v-for='(item,index) in colors'><a href="javascript:;"
+                        :style='{backgroundColor:item.hex}' @click.stop='change(item.hex,item.name,item.eName,item.rgb)'
+                        @mouseleave='mouseleave' @mouseenter='mouseenter'><span>{{item.name}}</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tittle_top">
+        <h5>国·色</h5>
+        <span>只想静静写点东西 做有意义的事</span>
+    </div>
+    <div id="app">
+        <!-- 左边颜色详情 -->
+        <div class="color_info">
+            <div class="color_main" :style='{backgroundColor:colorHex}'></div>
+            <div class="color_rgb">
+                <span>RGB值:{{colorRgb}}</span>
+            </div>
+            <div class="color_hex">
+                <span>HEX值:{{colorHex}}</span>
+            </div>
+        </div>
+        <!-- 右边颜色名称 -->
+        <div class="color_tittle" :style='{backgroundColor:colorHex}'>
+            <span class="main_tittle">{{colorName}}</span>
+            <span class="en_tittle">{{colorEname}}</span>
+        </div>
+    </div>
+    <div class="bottom_tittle">
+        <span class="ver">@2020-www.warrior.cool</span>
+        <span class="ver1">所有资源来自开源网络</span>
+        <span>苏ICP备20016348号-1</span>
+    </div>
+</body>
+
+
+<script src="./js/axios.js"></script>
+<script src="./js/vue.js"></script>
+<script src="./js/vue-router.js"></script>
+<script src="./js/hello.js"></script>
+
+
+<script>
+    var btn = document.querySelector('.btn');
+    var menu = document.querySelector('.left_menu');
+    var float = true;
+    btn.onclick = function (e) {
+        e.stopPropagation();
+        if (float) {
+            btn.style.animationName = 'back';
+            menu.style.animationName = 'back_menu';
+            float = !float;
+        }
+        else {
+            btn.style.animationName = 'in';
+            menu.style.animationName = 'in_menu';
+            float = !float;
+        }
+    }
+</script>
+
+</html>
